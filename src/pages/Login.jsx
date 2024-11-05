@@ -29,7 +29,7 @@ export const Login = () => {
             <div className="flex md:w-1/2 justify-center py-10 items-center bg-white">
                 <form className="bg-white">
                     <h1 className="text-gray-800 font-bold text-2xl mb-1 ">Log in</h1>
-                    <p className="text-sm font-normal text-gray-600 mb-7">Welcome to TimeMaker</p>
+                    <p className="text-sm font-normal text-gray-600 mb-4">Welcome Back</p>
                     <div className="flex items-center border-2 border-gray-300 py-2 px-3 rounded-2xl mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
