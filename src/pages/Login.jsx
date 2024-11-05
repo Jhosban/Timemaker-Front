@@ -10,42 +10,46 @@ export const Login = () => {
         if (email == "test@test.com" && password == "123") {
             navigate("/home")
         }
-    }    
-    
+    }
+
     return (
-    <div className="flex items-center min-h-screen bg-white dark:bg-gray-900">
-        <div className="container mx-auto">
-            <div className="max-w-md mx-auto my-10">
-                <div className="text-center">
-                    <h1 className="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">Sign in</h1>
-                    <p className="text-gray-500 dark:text-gray-400">Sign in to access your account</p>
+        <div className="h-screen md:flex">
+            <div
+                className="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-blue-600 to-blue-400 i justify-around items-center hidden">
+                <div>
+                    <img className="w-2/3 mx-auto" src="logo_horario.png" alt="Logo Horario" />
+                    <h1 className="text-300 font-bold text-4xl font-sans"></h1>
+                    <p className="text-100 mt-1"></p>
                 </div>
-                <div className="m-7">
-                    <form action="">
-                        <div className="mb-6">
-                            <label htmlFor="email" className="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
-                            <input type="email" name="email" id="email" placeholder="you@company.com" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-                                onChange={(e) => setEmail(e.target.value)}
-                                value={email}/>
-                        </div>
-                        <div className="mb-6">
-                            <div className="flex justify-between mb-2">
-                                <label htmlFor="password" className="text-sm text-gray-600 dark:text-gray-400">Password</label>
-                                <a href="#!" className="text-sm text-gray-400 focus:outline-none focus:text-indigo-500 hover:text-indigo-500 dark:hover:text-indigo-300">Forgot password?</a>
-                            </div>
-                            <input type="password" name="password" id="password" placeholder="Your Password" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" 
-                                onChange={(e) => setPassword(e.target.value)}
-                                value={password}/>
-                        </div>
-                        <div className="mb-6">
-                            <button type="button" className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
-                                onClick={handleClickLogin}>Sign in</button>
-                        </div>
-                        <p className="text-sm text-center text-gray-400">Don&#x27;t have an account yet? <a href="#!" className="text-indigo-400 focus:outline-none focus:underline focus:text-indigo-500 dark:focus:border-indigo-800">Sign up</a>.</p>
-                    </form>
-                </div>
+                <div className="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-yellow-100 border-opacity-50 border-t-8"></div>
+                <div className="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-yellow-100 border-opacity-50 border-t-8"></div>
+                <div className="absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-yellow-100 border-opacity-50 border-t-8"></div>
+                <div className="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-yellow-100 border-opacity-50 border-t-8"></div>
+            </div>
+            <div className="flex md:w-1/2 justify-center py-10 items-center bg-white">
+                <form className="bg-white">
+                    <h1 className="text-gray-800 font-bold text-2xl mb-1 ">Log in</h1>
+                    <p className="text-sm font-normal text-gray-600 mb-7">Welcome to TimeMaker</p>
+                    <div className="flex items-center border-2 border-gray-300 py-2 px-3 rounded-2xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                        </svg>
+                        <input onChange={(e) => setEmail(e.target.value)} className="pl-2 outline-none border-none w-full" type="text" placeholder="Email Address" />
+                    </div>
+                    <div className="flex items-center border-2 border-gray-300 py-2 px-3 rounded-2xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fillRule="evenodd"
+                                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                                clipRule="evenodd" />
+                        </svg>
+                        <input onChange={(e) => setPassword(e.target.value)} className="pl-2 outline-none border-none w-full" type="password" placeholder="Password" />
+                    </div>
+                    <button onClick={handleClickLogin} type="submit" className="block w-full bg-blue-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Login</button>
+                </form>
             </div>
         </div>
-    </div>
     )
 }
